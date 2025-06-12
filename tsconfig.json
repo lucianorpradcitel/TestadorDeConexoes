@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Configurações Básicas */
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"], // Adicionado para ser explícito
+
+    /* Estrutura de Pastas */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Resolução de Módulos */
+    "moduleResolution": "node", // Adicionado
+    "esModuleInterop": true,
+
+    /* Debugging e Qualidade */
+    "sourceMap": true, // Adicionado para facilitar o debug
+    "forceConsistentCasingInFileNames": true, // Adicionado para evitar bugs de casing
+
+    /* Rigor e Performance */
+    "strict": true,
+    "skipLibCheck": true // Adicionado para acelerar a compilação
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
