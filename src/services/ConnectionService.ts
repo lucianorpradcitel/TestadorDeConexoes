@@ -1,6 +1,6 @@
 import InfoConexao from "../models/InfoConexao";
 
-const mysql = require('mysql2/promise');
+import mysql from 'mysql2/promise';
 import ResultadoConexao from '../models/ResultadoConexao';
 
 class TesteConexaoService {
