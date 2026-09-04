@@ -1,0 +1,13 @@
+services:
+  testador-conexoes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: testador-de-conexoes:1.0.0
+    container_name: testador-conexoes
+    restart: unless-stopped
+    ports:
+      # host:container — mude só o lado esquerdo se a 3000 já estiver ocupada
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
