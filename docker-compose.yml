@@ -7,7 +7,16 @@ services:
     container_name: testador-conexoes
     restart: unless-stopped
     ports:
-      # host:container — mude só o lado esquerdo se a 3000 já estiver ocupada
+      # host:container — mude só o lado esquerdo se a 3000 já estiver ocupada.
+      # Serve para acessar o Swagger de fora; o n8n NÃO usa esta porta.
       - "3000:3000"
     environment:
       NODE_ENV: production
+    networks:
+      - network_n8n
+
+networks:
+  # Rede já existente, criada pela stack do n8n. "external" significa que o
+  # Compose apenas se conecta a ela, sem tentar criá-la ou removê-la.
+  network_n8n:
+    external: true
